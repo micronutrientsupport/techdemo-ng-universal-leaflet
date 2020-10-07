@@ -1,35 +1,26 @@
-# TechdemoNgUniversalLeaflet
+# Angular 9 & Server Side Rendering with Leaflet Content Tech Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Universal
+## To Run Server
 
 To start rendering your app with Universal on your local system, use the following command.
 
 ```bash
 npm run dev:ssr
 ```
+
+### Notes
+
+WHy is Leaflet accessed from a service?
+
+https://github.com/angular/universal/blob/master/docs/gotchas.md
+
+## "window is not defined"
+
+One of the most common issues when using Angular Universal is the lack of browser global
+variables in the server environment. This is because the Universal project uses
+[domino](https://github.com/fgnass/domino) as the server DOM rendering engine. As a result,
+there is certain functionality that won't be present or supported on the server. This
+includes the `window` and `document` global objects, cookies, certain HTML elements (like canvas),
+and several others. There is no exhaustive list, so please be aware of the fact that if you
+see an error like this, where a previously-accessible global is not defined, it's likely because
+that global is not available through domino.
