@@ -10,13 +10,13 @@ npm run dev:ssr
 
 ### Notes
 
-WHy is Leaflet accessed from a service?
+Why is Leaflet accessed from a service?
 
 https://github.com/angular/universal/blob/master/docs/gotchas.md
 
 ## "window is not defined"
 
-One of the most common issues when using Angular Universal is the lack of browser global
+> One of the most common issues when using Angular Universal is the lack of browser global
 variables in the server environment. This is because the Universal project uses
 [domino](https://github.com/fgnass/domino) as the server DOM rendering engine. As a result,
 there is certain functionality that won't be present or supported on the server. This
