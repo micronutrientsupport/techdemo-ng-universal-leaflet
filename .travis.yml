@@ -10,5 +10,6 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng lint
+  - npm run build:ssr
   - npm run serve:ssr
   - pa11y-ci -c ./.pa11yci
