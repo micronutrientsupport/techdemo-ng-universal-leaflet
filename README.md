@@ -4,6 +4,18 @@
 
 **`npm run build:ssr && npm run serve:ssr`** - Compiles your application and spins up a Node Express to serve your Universal application on `http://localhost:4000`.
 
+
+### Deployment
+
+1. `npm run build:ssr`
+2. Move the dist over to your server
+3. install PM2
+4. npm install pm2 -g
+On your server, use PM2 to run the server bundled app
+pm2 start dist/server.js
+If you're using Nginx, or other web servers, make sure to redirect requests to the port that the app started with PM2 is listening on.
+
+
 ### Notes
 
 Why is Leaflet accessed from a service?
