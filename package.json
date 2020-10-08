@@ -12,8 +12,8 @@
     "serve:ssr": "node dist/techdemo-ng-universal-leaflet/server/main.js",
     "build:ssr": "ng build --prod && ng run techdemo-ng-universal-leaflet:server:production",
     "prerender": "ng run techdemo-ng-universal-leaflet:prerender",
-    "test-headless": "ng test --watch=false --browsers=ChromeHeadless"
-
+    "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
+    "test-pa11y": "./node_modules/.bin/pa11y-ci"
   },
   "private": true,
   "dependencies": {
@@ -54,6 +54,8 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "pa11y-ci": "^2.4.0",
+    "pa11y-ci-reporter-html": "^2.0.3",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
