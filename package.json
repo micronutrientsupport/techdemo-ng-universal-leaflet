@@ -10,6 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run techdemo-ng-universal-leaflet:serve-ssr",
     "serve:ssr": "node dist/techdemo-ng-universal-leaflet/server/main.js",
+    "serve:ssr:headless": "node dist/techdemo-ng-universal-leaflet/server/main.js --watch=false --browsers=ChromeHeadless",
     "build:ssr": "ng build --prod && ng run techdemo-ng-universal-leaflet:server:production",
     "prerender": "ng run techdemo-ng-universal-leaflet:prerender",
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
@@ -17,7 +18,10 @@
     "preaccessibility": "ng build --prod",
     "accessibility": "npm-run-all --parallel --race server accessibility:run",
     "accessibility:run": "pa11y-ci -c ./.pa11yci",
-    "server": "ng serve"
+    "server": "ng serve",
+    "bing": "http-server ./dist/techdemo-ng-universal-leaflet/browser -a localhost -p 8000 -c-1",
+    "frogs": "npm run build:ssr",
+    "bong": "frogs && run-p bing pa11y-ci -c ./.pa11yci"
   },
   "private": true,
   "dependencies": {
