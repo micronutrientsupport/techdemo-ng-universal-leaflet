@@ -11,8 +11,8 @@ before_script:
 script:
   - ng lint
   - npm run build:ssr
-  - run-p bing pa11y
-  - npm run pa11yJson
+  - run-p bing pa11y pa11yJson
+  # - npm run pa11yJson
   - npm run pa11yReporter
   # - npm run serve:ssr
   # - pa11y-ci -c ./.pa11yci
