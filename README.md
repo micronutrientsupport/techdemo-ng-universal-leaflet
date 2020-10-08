@@ -1,12 +1,8 @@
 # Angular 9 & Server Side Rendering with Leaflet Content Tech Demo
 
-## To Run Server
+### Production (also for testing SSR/Pre-rendering locally)
 
-To start rendering your app with Universal on your local system, use the following command.
-
-```bash
-npm run dev:ssr
-```
+**`npm run build:ssr && npm run serve:ssr`** - Compiles your application and spins up a Node Express to serve your Universal application on `http://localhost:4000`.
 
 ### Notes
 

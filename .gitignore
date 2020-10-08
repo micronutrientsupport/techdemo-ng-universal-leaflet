@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# MK only demo allowed
+/utility/service-key.json
+/utility/service-key-demo.json
+/src/environments/environment.ts
