@@ -11,7 +11,9 @@
     "dev:ssr": "ng run techdemo-ng-universal-leaflet:serve-ssr",
     "serve:ssr": "node dist/techdemo-ng-universal-leaflet/server/main.js",
     "build:ssr": "ng build --prod && ng run techdemo-ng-universal-leaflet:server:production",
-    "prerender": "ng run techdemo-ng-universal-leaflet:prerender"
+    "prerender": "ng run techdemo-ng-universal-leaflet:prerender",
+    "test-headless": "ng test --watch=false --browsers=ChromeHeadless"
+
   },
   "private": true,
   "dependencies": {
