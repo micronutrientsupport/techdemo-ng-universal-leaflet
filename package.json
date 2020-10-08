@@ -19,8 +19,9 @@
     "accessibility": "npm-run-all --parallel --race server accessibility:run",
     "accessibility:run": "pa11y-ci -c ./.pa11yci",
     "server": "ng serve",
-    "bing": "http-server ./dist/techdemo-ng-universal-leaflet/browser -a localhost -p 4200 -c-1",
-    "pa11y": "pa11y-ci -c ./.pa11yci",
+    "bing": "http-server ./dist/techdemo-ng-universal-leaflet/browser -a localhost -p 4000 -c-1",
+    "pa11y": "pa11y-ci -c ./.pa11yci --json > ./pa11y/pa11y-ci-results.json",
+    "pa11yReporter": "pa11y-ci-reporter-html -s ./pa11y/pa11y-ci-results.json -d ./pa11y/",
     "frogs": "npm run build:ssr",
     "bong": "frogs && run-p bing"
   },
