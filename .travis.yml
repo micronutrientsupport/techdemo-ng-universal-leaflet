@@ -13,8 +13,26 @@ script:
   - npm run build:ssr
   - npm run bing
   # - run-p bing pa11y pa11yJson
+  # - run p pa11y pa11yJson
   - npm run pa11y
-  # - npm run pa11yJson
+  - npm run pa11yJson
   - npm run pa11yReporter
   # - npm run serve:ssr
   # - pa11y-ci -c ./.pa11yci
+
+deploy:
+  # Use Github pages deploy process
+  provider: pages
+  # Keep builded pages
+  skip-cleanup: true
+  # Directory where your generated files are located
+  local_dir: pa11y
+  # Github security/auth token
+  github-token: $GITHUB_TOKEN
+  # Incremental commit to keep old build/files from previous deployments
+  keep-history: true
+  # Git branch on which it should deploy (master, gh-pages, foo...)
+  target_branch: gh-pages
+  on:
+    # Which branch on commit/push will trigger deployment
+    branch: main
