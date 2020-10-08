@@ -10,12 +10,7 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng lint
-  - ng serve
-  - pa11y-ci -c ./.pa11yci
-# deploy:
-#   provider: pages
-#   skip_cleanup: true
-#   github_token: $GITHUB_TOKEN
-#   local_dir: dist/techdemo-ng-universal-leaflet
-#   on:
-#     branch: main
+  - run-p bing pa11y
+  # - npm run build:ssr
+  # - npm run serve:ssr
+  # - pa11y-ci -c ./.pa11yci
