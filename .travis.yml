@@ -10,7 +10,7 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng lint
-  - npm run bong
+  - run-p bing pa11y
   # - npm run build:ssr
   # - npm run serve:ssr
   # - pa11y-ci -c ./.pa11yci
