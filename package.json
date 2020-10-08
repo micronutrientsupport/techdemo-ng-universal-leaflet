@@ -16,7 +16,7 @@
     "test-pa11y": "./node_modules/.bin/pa11y-ci",
     "preaccessibility": "ng build --prod",
     "accessibility": "npm-run-all --parallel --race server accessibility:run",
-    "accessibility:run": "pa11y-ci",
+    "accessibility:run": "pa11y-ci -c ./.pa11yci",
     "server": "ng serve"
   },
   "private": true,

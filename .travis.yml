@@ -10,7 +10,8 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng lint
-  - ng build --prod --base-href https://micronutrientsupport.github.io/techdemo-ng-universal-leaflet/
+  - ng serve
+  - pa11y-ci -c ./.pa11yci
 # deploy:
 #   provider: pages
 #   skip_cleanup: true
